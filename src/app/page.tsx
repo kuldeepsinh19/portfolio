@@ -184,13 +184,6 @@ function Nav() {
         >
           {me.phone}
         </a>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
-          <a
-            href="#hero"
-            style={{ color: '#a1a1a6', fontSize: 15, fontWeight: 600, textDecoration: 'none', letterSpacing: '-0.01em' }}
-          >
-            KR
-          </a>
         <div className="nav-links">
           {navItems.map(id => (
             <a
@@ -210,7 +203,6 @@ function Nav() {
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
-        </div>
         </div>
       </Container>
     </nav>

@@ -99,7 +99,9 @@ const techStack = [
   { slug: 'git',           x: 7,  y: 66, size: 28, op: 0.14, dur: 8.0, dly: 1.0 },
   { slug: 'mongodb',       x: 26, y: 72, size: 28, op: 0.13, dur: 8.5, dly: 2.0 },
   { slug: 'javascript',    x: 46, y: 68, size: 34, op: 0.16, dur: 8.5, dly: 0.9 },
+  { slug: 'claude',        x: 52, y: 55, size: 34, op: 0.22, dur: 8.0, dly: 2.8 },
   { slug: 'anthropic',     x: 62, y: 60, size: 32, op: 0.20, dur: 8.8, dly: 3.5 },
+  { slug: 'googlegemini',  x: 76, y: 53, size: 34, op: 0.22, dur: 7.6, dly: 1.4 },
   { slug: 'googlecloud',   x: 79, y: 64, size: 42, op: 0.24, dur: 8.3, dly: 0.6 },
   { slug: 'mysql',         x: 93, y: 74, size: 34, op: 0.22, dur: 5.0, dly: 1.7 },
   // row 5 — bottom (y 82–92%) — right side normal, left very subtle

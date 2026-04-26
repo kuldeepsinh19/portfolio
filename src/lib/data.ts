@@ -1,6 +1,6 @@
 export const me = {
   name: 'Kuldeepsinh Rajput',
-  title: 'Backend Engineer & AI Engineer',
+  title: 'Backend & Agentic AI Engineer',
   location: 'Ahmedabad, India',
   experience: '3+ years',
   focus: 'Backend · AI · Cloud',
@@ -14,7 +14,7 @@ export const me = {
 export const experiences = [
   {
     company: 'Avesta HQ',
-    role: 'Backend Engineer & AI Engineer',
+    role: 'Backend & Agentic AI Engineer',
     period: 'Jan 2024 – Present',
     type: 'full-time',
     bullets: [

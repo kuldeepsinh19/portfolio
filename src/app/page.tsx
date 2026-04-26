@@ -169,30 +169,28 @@ function Nav() {
       }}
     >
       <Container style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
-          <a
-            href={`tel:${me.phone.replace(/\s/g, '')}`}
-            style={{
-              color: '#fff',
-              fontSize: 15,
-              fontWeight: 700,
-              textDecoration: 'none',
-              letterSpacing: '0.03em',
-              transition: 'color 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.color = '#a1a1a6')}
-            onMouseLeave={e => (e.currentTarget.style.color = '#fff')}
-          >
-            {me.phone}
-          </a>
-          <div style={{ width: 1, height: 16, background: '#2a2a2a' }} />
+        <a
+          href={`tel:${me.phone.replace(/\s/g, '')}`}
+          style={{
+            color: '#fff',
+            fontSize: 15,
+            fontWeight: 700,
+            textDecoration: 'none',
+            letterSpacing: '0.03em',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={e => (e.currentTarget.style.color = '#a1a1a6')}
+          onMouseLeave={e => (e.currentTarget.style.color = '#fff')}
+        >
+          {me.phone}
+        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
           <a
             href="#hero"
             style={{ color: '#a1a1a6', fontSize: 15, fontWeight: 600, textDecoration: 'none', letterSpacing: '-0.01em' }}
           >
             KR
           </a>
-        </div>
         <div className="nav-links">
           {navItems.map(id => (
             <a
@@ -212,6 +210,7 @@ function Nav() {
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>
           ))}
+        </div>
         </div>
       </Container>
     </nav>

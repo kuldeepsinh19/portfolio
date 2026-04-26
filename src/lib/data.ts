@@ -6,6 +6,7 @@ export const me = {
   focus: 'Backend · AI · Cloud',
   scale: '2M+ users served',
   status: 'Available for opportunities',
+  phone: '+91 91046 24966',
   email: 'kuldeepsinhrajput1919@gmail.com',
   linkedin: 'https://www.linkedin.com/in/kuldeepsinh-rajput-7089a8240/',
   github: 'https://github.com/kuldeepsinh19',

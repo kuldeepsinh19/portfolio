@@ -169,12 +169,31 @@ function Nav() {
       }}
     >
       <Container style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <a
-          href="#hero"
-          style={{ color: '#fff', fontSize: 18, fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.02em' }}
-        >
-          KR
-        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+          <a
+            href="#hero"
+            style={{ color: '#fff', fontSize: 18, fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.02em' }}
+          >
+            KR
+          </a>
+          <a
+            href={`tel:${me.phone.replace(/\s/g, '')}`}
+            style={{
+              color: '#a1a1a6',
+              fontSize: 14,
+              fontWeight: 500,
+              textDecoration: 'none',
+              letterSpacing: '0.02em',
+              transition: 'color 0.2s',
+              borderLeft: '1px solid #2a2a2a',
+              paddingLeft: 20,
+            }}
+            onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+            onMouseLeave={e => (e.currentTarget.style.color = '#a1a1a6')}
+          >
+            {me.phone}
+          </a>
+        </div>
         <div className="nav-links">
           {navItems.map(id => (
             <a

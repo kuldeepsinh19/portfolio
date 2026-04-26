@@ -239,9 +239,9 @@ function Hero() {
           >
             Node.js. AWS. Agentic AI.
             <br />
-            I build backends at scale — then build
+            Backends that scale to millions.
             <br />
-            the agents that build them faster.
+            Agents that don&apos;t assist. They ship.
           </p>
         </motion.div>
       </Container>

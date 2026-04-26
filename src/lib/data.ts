@@ -15,16 +15,15 @@ export const me = {
 export const experiences = [
   {
     company: 'Avesta HQ',
-    role: 'Backend & Agentic AI Engineer',
+    role: 'AI Engineer / Backend Engineer',
     period: 'Jan 2024 – Present',
     type: 'full-time',
     bullets: [
-      'Maintained and scaled view.com.au — a high-traffic Australian real estate platform serving 2M+ users across 8 microservices',
-      'Architected multi-agent AI orchestration system (LangChain + LangGraph) cutting feature delivery time by 70%',
-      'Built end-to-end RAG pipelines with OpenSearch over a 100K+ LOC codebase for context-aware code generation',
-      'Optimised REST API response times by 30% via multi-layer caching; validated at 10,000 concurrent users via k6',
-      'Designed serverless event-driven pipelines on AWS Lambda reducing dispatch latency by 40%',
-      'Built 3 reusable internal npm packages adopted across all 8 microservices, cutting duplicated code by 60%',
+      'Maintained AI-integrated backend for view.com.au — serving 2M+ users across 10+ repositories and 8 Node.js / TypeScript microservices',
+      'Architected a production multi-agent AI orchestration system on a legacy codebase with SPEC-driven workflow (analyze → plan → implement → test), cutting feature delivery time by 70%',
+      'Built RAG pipelines with vector-indexed retrieval over 100K+ LOC via OpenSearch for accurate, context-aware code generation',
+      'Optimised REST API response times by 30% via multi-layer caching and OpenSearch multi-search; validated at 10K concurrent users via k6; designed AWS Lambda pipelines (SFMC triggers) cutting dispatch latency by 40%',
+      'Built 3 internal npm packages (HTTP client, DB adapter, OpenSearch wrapper) across all 8 microservices cutting duplicated code by 60%; contributed to Zeus core backend and SEO-safe reverse proxy system',
     ],
   },
   {
@@ -33,9 +32,9 @@ export const experiences = [
     period: 'Jul 2023 – Dec 2023',
     type: 'internship',
     bullets: [
-      'Developed REST APIs for production applications',
-      'Implemented event-driven architecture with AWS SQS',
-      'Contributed to AWS Lambda and ECS deployments',
+      'Built RESTful APIs and microservices in Node.js / TypeScript across AWS services (Cognito, S3, RDS, Lambda) within a Clean Architecture codebase',
+      'Implemented database operations, service integrations, and backend improvements for a real estate platform managing property listings',
+      'Participated in full feature delivery from technical specification to production deployment',
     ],
   },
 ];
@@ -43,20 +42,20 @@ export const experiences = [
 export const projects = [
   {
     name: 'Zinnova',
-    desc: 'Solo-built production-grade full-stack SaaS architected to scale to 5,000+ concurrent users, 99.9% uptime design, 70% less manual content work',
-    tags: ['Node.js', 'Next.js', 'LangChain', 'LangGraph', 'AWS', 'Gemini', 'Vertex AI'],
+    desc: 'Solo-built Generative AI marketing SaaS — full-stack (Node.js + Next.js) on AWS, architected to serve 5,000+ concurrent users with OAuth2/JWT auth and Razorpay payments. Google Gemini + Vertex AI power AI content and image generation, reducing manual content work by 70%. 99.9% uptime design with auto-scaling serverless infrastructure.',
+    tags: ['Node.js', 'Next.js', 'LangChain', 'LangGraph', 'AWS', 'Gemini', 'Vertex AI', 'Razorpay'],
     url: 'https://zinnova.in',
   },
   {
     name: 'view.com.au',
-    desc: 'High-traffic Australian real estate platform  maintained AI-integrated backend serving 2M+ users across 8 microservices, optimised API response times by 30%, built 3 reusable internal npm packages, and architected serverless event-driven pipelines reducing dispatch latency by 40%',
+    desc: 'High-traffic Australian real estate platform — maintained AI-integrated backend serving 2M+ users across 10+ repositories and 8 microservices. Optimised API response times by 30% via multi-layer caching and OpenSearch multi-search, built 3 reusable internal npm packages, and architected serverless event-driven pipelines cutting dispatch latency by 40%.',
     tags: ['Node.js', 'TypeScript', 'AWS', 'OpenSearch', 'Microservices', 'LangChain', 'LangGraph'],
     url: 'https://view.com.au',
   },
   {
     name: 'Orchestrator AI Dev System',
-    desc: 'Internal agentic system — 70% faster feature delivery, RAG over large codebases',
-    tags: ['Node.js', 'RAG', 'OpenSearch', 'LangGraph', 'LangChain'],
+    desc: 'Internal multi-agent system driving the full dev lifecycle — from requirement analysis and architecture planning to code implementation and test generation. RAG pipelines with vector-indexed semantic search over 100K+ LOC via OpenSearch; pageIndex-based vectorless retrieval as an alternative. Achieved 70% reduction in feature delivery time on a brownfield production codebase.',
+    tags: ['Node.js', 'LangChain', 'LangGraph', 'RAG', 'OpenSearch', 'Agentic AI'],
     url: null,
   },
   {

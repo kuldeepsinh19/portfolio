@@ -168,22 +168,24 @@ function Nav() {
         alignItems: 'center',
       }}
     >
-      <Container style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <a
-          href={`tel:${me.phone.replace(/\s/g, '')}`}
-          style={{
-            color: '#fff',
-            fontSize: 15,
-            fontWeight: 700,
-            textDecoration: 'none',
-            letterSpacing: '0.03em',
-            transition: 'color 0.2s',
-          }}
-          onMouseEnter={e => (e.currentTarget.style.color = '#a1a1a6')}
-          onMouseLeave={e => (e.currentTarget.style.color = '#fff')}
-        >
-          {me.phone}
-        </a>
+      <a
+        href={`tel:${me.phone.replace(/\s/g, '')}`}
+        style={{
+          position: 'absolute',
+          left: 'max(16px, 2.5vw)',
+          color: '#fff',
+          fontSize: 15,
+          fontWeight: 700,
+          textDecoration: 'none',
+          letterSpacing: '0.03em',
+          transition: 'color 0.2s',
+        }}
+        onMouseEnter={e => (e.currentTarget.style.color = '#a1a1a6')}
+        onMouseLeave={e => (e.currentTarget.style.color = '#fff')}
+      >
+        {me.phone}
+      </a>
+      <Container style={{ width: '100%', display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
         <div className="nav-links">
           {navItems.map(id => (
             <a

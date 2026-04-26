@@ -50,7 +50,7 @@ body {
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
 
 /* nav links — hidden on mobile */
-.nav-links { display: flex; gap: 28px; }
+.nav-links { display: flex; gap: 36px; }
 @media (max-width: 700px) { .nav-links { display: none; } }
 
 /* stats grid */

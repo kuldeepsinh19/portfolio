@@ -158,11 +158,11 @@ function Nav() {
         left: 0,
         right: 0,
         zIndex: 200,
-        height: 52,
-        background: scrolled ? 'rgba(0,0,0,0.82)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : 'none',
+        height: 64,
+        background: scrolled ? 'rgba(0,0,0,0.88)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
+        WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
         transition: 'background 0.4s ease, border-color 0.4s ease',
         display: 'flex',
         alignItems: 'center',
@@ -171,7 +171,7 @@ function Nav() {
       <Container style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a
           href="#hero"
-          style={{ color: '#fff', fontSize: 15, fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.01em' }}
+          style={{ color: '#fff', fontSize: 18, fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.02em' }}
         >
           KR
         </a>
@@ -180,9 +180,16 @@ function Nav() {
             <a
               key={id}
               href={`#${id}`}
-              style={{ color: '#86868b', fontSize: 13, textDecoration: 'none', transition: 'color 0.2s' }}
+              style={{
+                color: '#a1a1a6',
+                fontSize: 15,
+                fontWeight: 500,
+                textDecoration: 'none',
+                letterSpacing: '0.01em',
+                transition: 'color 0.2s',
+              }}
               onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#86868b')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#a1a1a6')}
             >
               {id.charAt(0).toUpperCase() + id.slice(1)}
             </a>

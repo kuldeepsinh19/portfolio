@@ -750,6 +750,78 @@ function Achievements() {
             ))}
           </div>
         </Reveal>
+
+        {/* view.com.au platform performance */}
+        <Reveal delay={0.15}>
+          <div style={{ borderTop: '1px solid #1d1d1f', marginTop: 80, paddingTop: 64 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 40 }}>
+              <span style={{ color: '#3a3a3a', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
+                Platform Engineering
+              </span>
+              <div style={{ flex: 1, height: 1, background: '#1d1d1f' }} />
+              <a
+                href="https://view.com.au"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: '#555', fontSize: 12, textDecoration: 'none', letterSpacing: '0.04em', transition: 'color 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.color = '#fff')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#555')}
+              >
+                view.com.au ↗
+              </a>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }}>
+              <div>
+                <h3
+                  style={{
+                    color: '#fff',
+                    fontSize: 'clamp(22px, 3vw, 36px)',
+                    fontWeight: 700,
+                    letterSpacing: '-0.03em',
+                    lineHeight: 1.15,
+                    marginBottom: 20,
+                  }}
+                >
+                  30% faster API.
+                  <br />
+                  10K users. Zero compromise.
+                </h3>
+                <p style={{ color: '#6e6e73', fontSize: 15, lineHeight: 1.7, maxWidth: 440 }}>
+                  Diagnosed bottlenecks in a high-traffic real estate backend serving 2M+ users.
+                  Implemented multi-layer caching and rewrote fan-out queries using OpenSearch
+                  multi-search — collapsing multiple round trips into a single batched call.
+                  Validated under 10,000 concurrent users via k6 load testing with no degradation.
+                </p>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 1, background: '#1d1d1f' }}>
+                {[
+                  { value: '30%',  label: 'API Response Time Reduced' },
+                  { value: '10K',  label: 'Concurrent Users Validated' },
+                  { value: '40%',  label: 'Lambda Dispatch Latency Cut' },
+                  { value: '2M+',  label: 'Users on the Platform' },
+                ].map(({ value, label }) => (
+                  <div key={label} style={{ background: '#0a0a0a', padding: '28px 24px' }}>
+                    <div
+                      style={{
+                        fontSize: 'clamp(28px, 3.5vw, 48px)',
+                        fontWeight: 700,
+                        color: '#fff',
+                        letterSpacing: '-0.04em',
+                        lineHeight: 1,
+                        marginBottom: 8,
+                      }}
+                    >
+                      {value}
+                    </div>
+                    <div style={{ color: '#555', fontSize: 12, lineHeight: 1.4 }}>{label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

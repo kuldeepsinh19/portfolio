@@ -104,6 +104,31 @@ body {
   .skill-bar-col { display: none; }
 }
 
+/* pipeline grid */
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #1d1d1f;
+}
+@media (max-width: 800px) {
+  .pipeline-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .pipeline-grid { grid-template-columns: 1fr; }
+}
+
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid #1d1d1f;
+  margin-top: 1px;
+}
+@media (max-width: 600px) {
+  .outcome-grid { grid-template-columns: 1fr; }
+}
+
 /* certs grid */
 .certs-grid {
   display: grid;

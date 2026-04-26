@@ -126,7 +126,7 @@ function TechBackground() {
 
 // ─── Nav ─────────────────────────────────────────────────────────────────────
 
-const navItems = ['experience', 'projects', 'skills', 'certifications', 'contact'];
+const navItems = ['experience', 'projects', 'skills', 'achievements', 'certifications', 'contact'];
 
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -573,6 +573,150 @@ function Skills() {
   );
 }
 
+// ─── Achievements ─────────────────────────────────────────────────────────────
+
+const pipeline = [
+  {
+    agent: 'Winston',
+    role: 'Planner',
+    label: '01 / Plan',
+    desc: 'Reads codebase, requirements, and architecture. Produces a structured SPEC — file targets, decision rationale, implementation sequence — before any code is written.',
+  },
+  {
+    agent: 'Amelia',
+    role: 'Developer',
+    label: '02 / Implement',
+    desc: 'Follows the SPEC step-by-step. Writes production-grade code across a brownfield Node.js codebase using RAG-retrieved context from 100K+ LOC via OpenSearch.',
+  },
+  {
+    agent: 'Murat',
+    role: 'Test Architect',
+    label: '03 / Test',
+    desc: 'Adversarial quality gate. Finds a minimum of 3–10 issues per run — edge cases, security gaps, reliability failures — before any output leaves the pipeline.',
+  },
+  {
+    agent: 'Viktor',
+    role: 'Code Reviewer',
+    label: '04 / Review',
+    desc: 'Final standards enforcement: architecture, performance, security, naming. Only code that clears Viktor reaches the developer for final human review.',
+  },
+];
+
+const outcomes = [
+  { value: '70%', label: 'Faster Feature Delivery' },
+  { value: '60%', label: 'Development Speed Increase' },
+  { value: '100K+', label: 'LOC Codebase Covered' },
+];
+
+function Achievements() {
+  return (
+    <section id="achievements" style={{ background: '#000', padding: '120px 0' }}>
+      <Container>
+        <Reveal>
+          <Label n="04" text="Achievement" dark />
+          <h2
+            style={{
+              color: '#fff',
+              fontSize: 'clamp(40px, 6vw, 80px)',
+              fontWeight: 700,
+              letterSpacing: '-0.04em',
+              marginBottom: 24,
+              lineHeight: 1,
+            }}
+          >
+            SPEC-driven agents.
+            <br />
+            Production shipped.
+          </h2>
+          <p
+            style={{
+              color: '#6e6e73',
+              fontSize: 'clamp(16px, 1.8vw, 20px)',
+              lineHeight: 1.6,
+              maxWidth: 620,
+              marginBottom: 80,
+            }}
+          >
+            Built a 4-agent autonomous development pipeline on a brownfield Node.js codebase serving
+            2M+ users — moving from spec to production-grade code, reliably and at scale.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="pipeline-grid">
+            {pipeline.map(stage => (
+              <div key={stage.agent} style={{ background: '#0a0a0a', padding: 'max(32px, 3.5vw)' }}>
+                <div
+                  style={{
+                    color: '#3a3a3a',
+                    fontSize: 11,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    marginBottom: 20,
+                  }}
+                >
+                  {stage.label}
+                </div>
+                <div
+                  style={{
+                    color: '#fff',
+                    fontSize: 'clamp(20px, 2vw, 26px)',
+                    fontWeight: 700,
+                    letterSpacing: '-0.025em',
+                    marginBottom: 6,
+                  }}
+                >
+                  {stage.agent}
+                </div>
+                <div
+                  style={{
+                    color: '#555',
+                    fontSize: 11,
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    marginBottom: 20,
+                  }}
+                >
+                  {stage.role}
+                </div>
+                <div style={{ color: '#6e6e73', fontSize: 14, lineHeight: 1.65 }}>{stage.desc}</div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.2}>
+          <div className="outcome-grid">
+            {outcomes.map(({ value, label }, i) => (
+              <div
+                key={label}
+                style={{
+                  padding: 'max(36px, 4vw)',
+                  borderRight: i < outcomes.length - 1 ? '1px solid #1d1d1f' : 'none',
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: 'clamp(40px, 5vw, 72px)',
+                    fontWeight: 700,
+                    color: '#fff',
+                    letterSpacing: '-0.04em',
+                    lineHeight: 1,
+                    marginBottom: 10,
+                  }}
+                >
+                  {value}
+                </div>
+                <div style={{ color: '#555', fontSize: 14 }}>{label}</div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </Container>
+    </section>
+  );
+}
+
 // ─── Certifications ───────────────────────────────────────────────────────────
 
 function Certifications() {
@@ -580,7 +724,7 @@ function Certifications() {
     <section id="certifications" style={{ background: '#fff', padding: '120px 0' }}>
       <Container>
         <Reveal>
-          <Label n="04" text="Certifications" dark={false} />
+          <Label n="05" text="Certifications" dark={false} />
           <h2
             style={{
               color: '#000',
@@ -666,7 +810,7 @@ function Contact() {
     <section id="contact" style={{ background: '#000', padding: '120px 0 80px' }}>
       <Container>
         <Reveal>
-          <Label n="05" text="Contact" dark />
+          <Label n="06" text="Contact" dark />
           <h2
             style={{
               color: '#fff',
@@ -768,6 +912,7 @@ export default function Page() {
       <Experience />
       <Projects />
       <Skills />
+      <Achievements />
       <Certifications />
       <Contact />
     </>

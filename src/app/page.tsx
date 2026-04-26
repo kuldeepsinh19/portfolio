@@ -92,7 +92,7 @@ const techStack = [
   // row 3 — mid (y 38–55%)
   { slug: 'vercel',        x: 13, y: 44, size: 30, op: 0.18, dur: 9.2, dly: 2.2 },
   { slug: 'langchain',     x: 38, y: 50, size: 32, op: 0.18, dur: 7.8, dly: 4.0 },
-  { slug: 'openai',        x: 56, y: 38, size: 36, op: 0.22, dur: 7.0, dly: 1.0 },
+  { slug: 'huggingface',   x: 56, y: 38, size: 36, op: 0.22, dur: 7.0, dly: 1.0 },
   { slug: 'githubactions', x: 71, y: 42, size: 30, op: 0.20, dur: 7.5, dly: 3.0 },
   { slug: 'elasticsearch', x: 89, y: 47, size: 36, op: 0.24, dur: 6.2, dly: 0.7 },
   // row 4 — lower-mid (y 60–76%) — right half brighter, left subtle (near text)

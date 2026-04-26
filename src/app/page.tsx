@@ -172,12 +172,12 @@ function Nav() {
         href={`tel:${me.phone.replace(/\s/g, '')}`}
         style={{
           position: 'absolute',
-          left: 'max(16px, 2.5vw)',
+          left: 'max(32px, 4vw)',
           color: '#fff',
-          fontSize: 15,
+          fontSize: 18,
           fontWeight: 700,
           textDecoration: 'none',
-          letterSpacing: '0.03em',
+          letterSpacing: '0.08em',
           transition: 'color 0.2s',
         }}
         onMouseEnter={e => (e.currentTarget.style.color = '#a1a1a6')}
@@ -194,7 +194,7 @@ function Nav() {
               style={{
                 color: '#a1a1a6',
                 fontSize: 15,
-                fontWeight: 500,
+                fontWeight: 600,
                 textDecoration: 'none',
                 letterSpacing: '0.01em',
                 transition: 'color 0.2s',

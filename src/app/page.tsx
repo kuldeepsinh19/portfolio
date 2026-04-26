@@ -77,26 +77,37 @@ function Label({ n, text, dark }: { n: string; text: string; dark: boolean }) {
 // ─── Tech background ──────────────────────────────────────────────────────────
 
 const techStack = [
-  { slug: 'amazonaws',     x: 8,  y: 8,  size: 54, op: 0.32, dur: 6.0, dly: 0.0 },
+  // row 1 — top strip (y 5–15%)
+  { slug: 'kubernetes',    x: 8,  y: 8,  size: 52, op: 0.30, dur: 6.0, dly: 0.0 },
   { slug: 'nodedotjs',     x: 30, y: 5,  size: 46, op: 0.34, dur: 7.2, dly: 1.2 },
   { slug: 'typescript',    x: 52, y: 9,  size: 38, op: 0.28, dur: 5.8, dly: 0.8 },
   { slug: 'docker',        x: 74, y: 6,  size: 44, op: 0.30, dur: 8.0, dly: 2.1 },
   { slug: 'github',        x: 91, y: 13, size: 38, op: 0.24, dur: 6.5, dly: 0.5 },
-  { slug: 'react',         x: 83, y: 30, size: 40, op: 0.24, dur: 7.0, dly: 1.8 },
-  { slug: 'nextdotjs',     x: 63, y: 22, size: 36, op: 0.22, dur: 8.5, dly: 0.3 },
-  { slug: 'redis',         x: 16, y: 25, size: 32, op: 0.20, dur: 9.0, dly: 2.5 },
+  // row 2 — upper-mid (y 20–35%)
+  { slug: 'redis',         x: 16, y: 25, size: 32, op: 0.22, dur: 9.0, dly: 2.5 },
+  { slug: 'postgresql',    x: 28, y: 32, size: 30, op: 0.22, dur: 7.5, dly: 1.8 },
   { slug: 'terraform',     x: 41, y: 20, size: 30, op: 0.20, dur: 6.8, dly: 1.5 },
-  { slug: 'elasticsearch', x: 89, y: 47, size: 36, op: 0.24, dur: 6.2, dly: 0.7 },
-  { slug: 'githubactions', x: 71, y: 42, size: 30, op: 0.20, dur: 7.5, dly: 3.0 },
-  { slug: 'openai',        x: 56, y: 38, size: 36, op: 0.22, dur: 7.0, dly: 1.0 },
+  { slug: 'nextdotjs',     x: 63, y: 22, size: 36, op: 0.22, dur: 8.5, dly: 0.3 },
+  { slug: 'react',         x: 83, y: 30, size: 40, op: 0.24, dur: 7.0, dly: 1.8 },
+  // row 3 — mid (y 38–55%)
   { slug: 'vercel',        x: 13, y: 44, size: 30, op: 0.18, dur: 9.2, dly: 2.2 },
+  { slug: 'langchain',     x: 38, y: 50, size: 32, op: 0.18, dur: 7.8, dly: 4.0 },
+  { slug: 'openai',        x: 56, y: 38, size: 36, op: 0.22, dur: 7.0, dly: 1.0 },
+  { slug: 'githubactions', x: 71, y: 42, size: 30, op: 0.20, dur: 7.5, dly: 3.0 },
+  { slug: 'elasticsearch', x: 89, y: 47, size: 36, op: 0.24, dur: 6.2, dly: 0.7 },
+  // row 4 — lower-mid (y 60–76%) — right half brighter, left subtle (near text)
+  { slug: 'git',           x: 7,  y: 66, size: 28, op: 0.14, dur: 8.0, dly: 1.0 },
+  { slug: 'mongodb',       x: 26, y: 72, size: 28, op: 0.13, dur: 8.5, dly: 2.0 },
+  { slug: 'javascript',    x: 46, y: 68, size: 34, op: 0.16, dur: 8.5, dly: 0.9 },
+  { slug: 'anthropic',     x: 62, y: 60, size: 32, op: 0.20, dur: 8.8, dly: 3.5 },
   { slug: 'googlecloud',   x: 79, y: 64, size: 42, op: 0.24, dur: 8.3, dly: 0.6 },
   { slug: 'mysql',         x: 93, y: 74, size: 34, op: 0.22, dur: 5.0, dly: 1.7 },
-  { slug: 'anthropic',     x: 61, y: 60, size: 32, op: 0.18, dur: 8.8, dly: 3.5 },
-  { slug: 'javascript',    x: 46, y: 70, size: 34, op: 0.16, dur: 8.5, dly: 0.9 },
-  { slug: 'linux',         x: 86, y: 86, size: 32, op: 0.20, dur: 6.3, dly: 2.8 },
+  // row 5 — bottom (y 82–92%) — right side normal, left very subtle
+  { slug: 'nginx',         x: 8,  y: 88, size: 26, op: 0.12, dur: 7.0, dly: 3.0 },
+  { slug: 'npm',           x: 27, y: 84, size: 26, op: 0.12, dur: 8.0, dly: 1.5 },
+  { slug: 'graphql',       x: 48, y: 90, size: 26, op: 0.12, dur: 7.5, dly: 2.5 },
   { slug: 'express',       x: 69, y: 88, size: 30, op: 0.18, dur: 7.2, dly: 1.3 },
-  { slug: 'langchain',     x: 38, y: 55, size: 32, op: 0.15, dur: 7.8, dly: 4.0 },
+  { slug: 'linux',         x: 86, y: 86, size: 32, op: 0.20, dur: 6.3, dly: 2.8 },
 ];
 
 function TechBackground() {

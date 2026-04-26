@@ -741,13 +741,15 @@ function Certifications() {
 
         <div className="certs-grid">
           {certifications.map((cert, i) => (
-            <Reveal key={cert.title} delay={i * 0.1}>
+            <Reveal key={cert.title} delay={i * 0.1} fill>
               <a
                 href={cert.url}
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  display: 'block',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%',
                   background: '#fff',
                   padding: 'max(36px, 4vw)',
                   textDecoration: 'none',
@@ -790,6 +792,7 @@ function Certifications() {
                     gap: 8,
                     borderTop: '1px solid #e5e5e5',
                     paddingTop: 20,
+                    marginTop: 'auto',
                   }}
                 >
                   View certificate <span>↗</span>

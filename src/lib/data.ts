@@ -15,7 +15,7 @@ export const me = {
 export const experiences = [
   {
     company: 'Avesta HQ',
-    role: 'AI Engineer / Backend Engineer',
+    role: 'Backend & Agentic AI Developer',
     period: 'Jan 2024 – Present',
     type: 'full-time',
     bullets: [

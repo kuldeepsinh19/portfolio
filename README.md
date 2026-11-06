@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio of **Kuldeepsinh Rajput**, a Backend & Agentic AI Engineer.
+Personal portfolio of **Kuldeepsinh Rajput** — Backend Engineer | Agentic AI & Software Engineering.
 
 **Live:** https://portfolio-xi-eight-000yuu2s96.vercel.app
 
@@ -33,11 +33,34 @@ Other scripts:
 
 ```
 src/
-  app/          layout, page and 404 page (App Router)
-  lib/data.ts   all profile content: experience, projects, skills, certificates
+  app/
+    layout.tsx               fonts, metadata, viewport
+    page.tsx                 homepage: composes the sections below
+    projects/[slug]/         statically generated case study pages
+    opengraph-image.tsx      build-time social preview image
+    sitemap.ts, robots.ts
+  components/                one component + CSS module per section
+    FlowDiagram.tsx          reusable architecture diagram (full and compact)
+    ArchitectureExplorer.tsx tabbed "System Design" explorer
+  lib/
+    types.ts                 content model
+    data.ts                  profile, hero/about copy, metrics, experience, certifications
+    case-studies.ts          featured case studies (drives cards, pages, explorer, sitemap)
+    content.ts               AI engineering, stack groups, additional projects
 public/
-  certs/        certificate PDFs
-  diagrams/     architecture diagrams shown on the site
+  certs/                     certificate PDFs
 ```
 
-To update the content, edit `src/lib/data.ts`; the page renders from it.
+## Updating content
+
+All copy lives in `src/lib/*`; components only render it.
+
+- **Add a case study:** append an object to `caseStudies` in `src/lib/case-studies.ts`.
+  It automatically gets a homepage card, a `/projects/<slug>` page, an explorer tab
+  and a sitemap entry.
+- **Links that aren't public yet:** use `href: null`. They are skipped instead of
+  rendered as broken links — fill in the URL when it's ready.
+- **Metrics:** only add numbers that can be verified. `metrics` in `data.ts` documents
+  where each one comes from.
+- **Design tokens** (colours, spacing, type) are CSS variables at the top of
+  `src/app/globals.css`.

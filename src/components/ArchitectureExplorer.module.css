@@ -1,0 +1,69 @@
+.layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.tabs { display: grid; gap: 4px; position: sticky; top: calc(var(--nav-h) + 24px); }
+.tab {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 10px;
+  padding: 14px 14px;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  transition: background 0.2s, border-color 0.2s;
+}
+.tab:hover { background: var(--bg-raised); }
+.tab[aria-selected='true'] { background: var(--surface); border-color: var(--line-strong); }
+.tab[aria-selected='true'] .tabIndex { color: var(--accent); }
+.tabIndex { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); padding-top: 2px; }
+.tabText { display: grid; gap: 3px; min-width: 0; }
+.tabTitle { font-weight: 600; font-size: 15px; }
+.tabSub { font-size: 12.5px; color: var(--text-3); line-height: 1.45; }
+
+@keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.panel {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: clamp(20px, 3vw, 36px);
+  align-items: start;
+  animation: fade 0.35s var(--ease-out);
+}
+
+.why { display: grid; gap: 16px; padding-top: 8px; }
+.why ul { list-style: none; display: grid; gap: 14px; }
+.why li { font-size: 14.5px; color: var(--text-2); line-height: 1.65; }
+.why strong { color: var(--text); font-weight: 600; }
+.why :global(.link-arrow) { justify-self: start; }
+
+@media (max-width: 1180px) {
+  .panel { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .tabs {
+    position: static;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    margin: 0 calc(var(--gutter) * -1);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 10px 14px;
+    border-color: var(--line);
+    scroll-snap-align: start;
+  }
+  .tabSub { display: none; }
+}

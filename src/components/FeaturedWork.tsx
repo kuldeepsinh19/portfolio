@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { caseStudies } from '@/lib/case-studies';
 import type { CaseStudy } from '@/lib/types';
 import { FlowDiagram } from './FlowDiagram';
+import { MoreProjects } from './MoreProjects';
 import { Reveal } from './Reveal';
 import { SectionHeader } from './SectionHeader';
 import styles from './FeaturedWork.module.css';
@@ -107,6 +108,7 @@ export function FeaturedWork() {
             <Card key={s.slug} study={s} delay={(i % 2) * 0.08} />
           ))}
         </div>
+        <MoreProjects />
       </div>
     </section>
   );

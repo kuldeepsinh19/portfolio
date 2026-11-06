@@ -5,6 +5,7 @@ import { About } from '@/components/About';
 import { FeaturedWork } from '@/components/FeaturedWork';
 import { AiEngineering } from '@/components/AiEngineering';
 import { ArchitectureExplorer } from '@/components/ArchitectureExplorer';
+import { Experience } from '@/components/Experience';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -22,6 +23,7 @@ export default function Page() {
         <FeaturedWork />
         <AiEngineering />
         <ArchitectureExplorer />
+        <Experience />
         <Contact />
       </main>
       <Footer />

@@ -2,27 +2,32 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: '#1e1e1e',
-      color: '#d4d4d4',
-      fontFamily: 'Consolas, monospace',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: 14,
-    }}>
-      <div style={{ textAlign: 'center' }}>
-        <div style={{ color: '#6a9955', marginBottom: 8 }}>{'// 404 — file not found'}</div>
-        <div style={{ color: '#569cd6', marginBottom: 24 }}>
-          <span style={{ color: '#c586c0' }}>throw</span>{' '}
-          <span style={{ color: '#4ec9b0' }}>new Error</span>
-          {'('}<span style={{ color: '#ce9178' }}>"Page does not exist"</span>{')'}
-        </div>
-        <Link href="/" style={{ color: '#9cdcfe', textDecoration: 'underline' }}>
-          cd ~/home
+    <main
+      id="main"
+      className="container"
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        gap: 24,
+      }}
+    >
+      <p className="eyebrow">
+        <b>404</b> Not found
+      </p>
+      <h1 className="h-section">
+        This page <em>doesn&apos;t exist.</em>
+      </h1>
+      <p className="lede">The link may be outdated, or the case study may have moved.</p>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+        <Link href="/" className="btn btn-primary">
+          Back to home
+        </Link>
+        <Link href="/#projects" className="btn btn-ghost">
+          See case studies
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

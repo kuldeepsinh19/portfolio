@@ -55,7 +55,7 @@ export const experiences: Experience[] = [
     period: 'Jan 2024 – Present',
     type: 'full-time',
     summary:
-      'Backend engineering for view.com.au, a high-traffic Australian real estate platform, and the agentic tooling the team uses to build it.',
+      'Backend engineering for view.com.au, a high-traffic Australian real estate platform — from API performance and AWS pipelines to a multi-agent development system on its codebase.',
     bullets: [
       'Maintain the AI-integrated backend for view.com.au — 2M+ users, 10+ repositories and 8 Node.js / TypeScript microservices.',
       'Architected a multi-agent development system on a legacy codebase with a SPEC-driven workflow (analyse → plan → implement → test), cutting feature delivery time by 70%.',

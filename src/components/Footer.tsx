@@ -2,9 +2,10 @@ import { me } from '@/lib/data';
 
 export function Footer() {
   return (
-    <footer className="container" style={{ borderTop: '1px solid var(--line)' }}>
+    <footer className="container">
       <div
         style={{
+          borderTop: '1px solid var(--line)',
           display: 'flex',
           flexWrap: 'wrap',
           gap: 12,

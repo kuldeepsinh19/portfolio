@@ -135,5 +135,5 @@ export const sideProjects: SideProject[] = [
 /** Smaller client builds kept from the previous portfolio. */
 export const clientSites = [
   { name: 'Mitansh Interiors', note: 'Business website', url: 'https://mitanshinteriors.com' },
-  { name: 'Aristo Cafe Restro', note: 'Restaurant website', url: 'https://aristocaferestro.com' },
+  { name: 'Aristo Cafe Restro', note: 'Restaurant website', url: 'http://aristocaferestro.com' },
 ];

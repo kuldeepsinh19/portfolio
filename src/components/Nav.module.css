@@ -1,0 +1,98 @@
+.bar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 200;
+  transition: background 0.3s, border-color 0.3s;
+  border-bottom: 1px solid transparent;
+}
+.bar[data-scrolled='true'] {
+  background: rgba(10, 13, 20, 0.86);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom-color: var(--line);
+}
+
+.inner {
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.phone {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.phone:hover { color: var(--accent); }
+
+.links {
+  display: flex;
+  gap: clamp(18px, 2.4vw, 32px);
+  list-style: none;
+}
+.links a {
+  position: relative;
+  color: var(--text-2);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.links a:hover,
+.links a[aria-current='true'] { color: var(--text); }
+.links a[aria-current='true']::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.menuBtn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-right: -10px;
+}
+.burger,
+.burger::before {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform 0.25s var(--ease-out);
+}
+.burger { position: relative; transform: translateY(-3px); }
+.burger::before { content: ''; position: absolute; top: 6px; }
+.burger[data-open='true'] { transform: rotate(45deg); }
+.burger[data-open='true']::before { transform: translateY(-6px) rotate(-90deg); }
+
+.mobile { display: none; }
+
+@media (max-width: 860px) {
+  .links { display: none; }
+  .menuBtn { display: inline-flex; }
+  .mobile[data-open='true'] {
+    display: block;
+    border-top: 1px solid var(--line);
+    background: rgba(10, 13, 20, 0.97);
+  }
+  .mobile ul { list-style: none; padding-top: 8px; padding-bottom: 20px; }
+  .mobile a {
+    display: block;
+    padding: 14px 0;
+    font-size: 20px;
+    font-weight: 550;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+}

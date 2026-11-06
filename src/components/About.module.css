@@ -1,0 +1,20 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(32px, 6vw, 96px);
+}
+.title { margin-top: 20px; }
+.body { display: grid; gap: 32px; font-size: 17px; }
+.principle {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 20px;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.5;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+}
+.principle span { color: var(--text); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}

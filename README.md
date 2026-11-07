@@ -1,6 +1,7 @@
 # Portfolio
 
 Personal portfolio of **Kuldeepsinh Rajput**, a Backend & Agentic AI Engineer.
+around 3 years of experience in software development
 
 **Live:** https://portfolio-xi-eight-000yuu2s96.vercel.app
 

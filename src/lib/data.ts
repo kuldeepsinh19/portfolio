@@ -1,5 +1,16 @@
 import type { Certification, Experience } from './types';
 
+/**
+ * Public URL used for canonical links, the sitemap and social previews.
+ * Order: an explicit NEXT_PUBLIC_SITE_URL, then the production domain Vercel
+ * provides at build time, then the original deployment URL.
+ */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'https://portfolio-xi-eight-000yuu2s96.vercel.app');
+
 export const me = {
   name: 'Kuldeepsinh Rajput',
   title: 'Backend Engineer',
@@ -11,7 +22,7 @@ export const me = {
   email: 'kuldeepsinhrajput1919@gmail.com',
   linkedin: 'https://www.linkedin.com/in/kuldeepsinh-rajput-7089a8240/',
   github: 'https://github.com/kuldeepsinh19',
-  site: 'https://portfolio-xi-eight-000yuu2s96.vercel.app',
+  site: siteUrl,
   positioning:
     'I build scalable backend systems and engineer AI-powered workflows that help teams investigate issues, automate engineering operations, and deliver software.',
   techSummary: ['Node.js', 'TypeScript', 'AWS', 'PostgreSQL', 'AI Agents', 'MCP', 'Distributed Systems'],

@@ -27,13 +27,13 @@ Every piece of knowledge should have a single, authoritative representation with
 ```javascript
 function calculateUserDiscount(user) {
   if (user.age > 65) return 0.2;
-  if (user.isPremium) return 0.15;
+  if (user.Ispremium) return 0.15;
   return 0.1;
 }
 
 function displayUserDiscount(user) {
   if (user.age > 65) return "20% discount";
-  if (user.isPremium) return "15% discount";
+  if (user.Ispremium) return "15% discount";
   return "10% discount";
 }
 ```

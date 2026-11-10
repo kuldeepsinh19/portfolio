@@ -1,18 +1,9 @@
 import Link from 'next/link';
+import styles from './not-found.module.css';
 
 export default function NotFound() {
   return (
-    <main
-      id="main"
-      className="container"
-      style={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        gap: 24,
-      }}
-    >
+    <main id="main" className={`container ${styles.page}`}>
       <p className="eyebrow">
         <b>404</b> Not found
       </p>
@@ -20,7 +11,7 @@ export default function NotFound() {
         This page <em>doesn&apos;t exist.</em>
       </h1>
       <p className="lede">The link may be outdated, or the case study may have moved.</p>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+      <div className={styles.actions}>
         <Link href="/" className="btn btn-primary">
           Back to home
         </Link>

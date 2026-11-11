@@ -2,14 +2,9 @@ import type { Certification, Experience } from './types';
 
 /**
  * Public URL used for canonical links, the sitemap and social previews.
- * Order: an explicit NEXT_PUBLIC_SITE_URL, then the production domain Vercel
- * provides at build time, then the original deployment URL.
+ * NEXT_PUBLIC_SITE_URL overrides it (e.g. for a custom domain later).
  */
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'https://portfolio-xi-eight-000yuu2s96.vercel.app');
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://kuldeepsinh-rajput.vercel.app';
 
 export const me = {
   name: 'Kuldeepsinh Rajput',

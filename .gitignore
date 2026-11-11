@@ -10,3 +10,5 @@ src/app/resumeDetails.md
 
 # editor settings
 .vscode/
+.vercel
+.env*

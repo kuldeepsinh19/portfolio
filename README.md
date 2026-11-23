@@ -29,6 +29,9 @@ Other scripts:
 | `npm run build`     | Production build                     |
 | `npm start`         | Serve the production build on :7000  |
 | `npm run typecheck` | Type-check without emitting files    |
+| `npm run lint`      | Lint with the ESLint flat config     |
+
+CI (`.github/workflows/ci.yml`) runs `typecheck` and `build` on every branch push.
 
 ## Structure
 

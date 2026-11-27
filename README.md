@@ -33,6 +33,15 @@ Other scripts:
 
 CI (`.github/workflows/ci.yml`) runs `typecheck` and `build` on every branch push.
 
+## Deploying
+
+The Vercel project is not connected to this repository, so pushing to `main` does not deploy.
+Deploy from an up-to-date checkout of `main`:
+
+```bash
+npx vercel deploy --prod
+```
+
 ## Structure
 
 ```
